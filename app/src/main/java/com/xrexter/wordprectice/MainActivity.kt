@@ -19,7 +19,12 @@ class MainActivity : AppCompatActivity() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 
+		binding = ActivityMainBinding.inflate(layoutInflater)
+		setContentView(binding.root)
+
+		setupViewPager()
 		setupTabLayout()
+
 
 //		val rvWords = findViewById<RecyclerView>(R.id.rv_words)
 //		wordsAdapter = WordsAdapter(this)

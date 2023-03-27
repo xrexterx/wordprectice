@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class WordsAdapter(private val context: Context) : RecyclerView.Adapter<WordsAdapter.ViewHolder>() {
 	var datas = mutableListOf<WordsData>()
-	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
+
+	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		val view = LayoutInflater.from(context).inflate(R.layout.item_recycler, parent,false)
 		return ViewHolder(view)
 	}
