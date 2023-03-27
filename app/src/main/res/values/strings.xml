@@ -2,4 +2,7 @@
 	<string name="app_name">wordprectice</string>
 	<!-- TODO: Remove or change this placeholder text -->
 	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="fm_add_eng">English</string>
+	<string name="fm_add_kor">Korean</string>
+	<string name="fm_add_btn">ADD</string>
 </resources>

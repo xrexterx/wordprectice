@@ -13,11 +13,13 @@ import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 //	lateinit var wordsAdapter: WordsAdapter
-
+	private lateinit var binding: ActivityMainBinding
 	override fun onCreate(savedInstanceState: Bundle?) {
+
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 
+		setupTabLayout()
 
 //		val rvWords = findViewById<RecyclerView>(R.id.rv_words)
 //		wordsAdapter = WordsAdapter(this)
@@ -78,6 +80,16 @@ class MainActivity : AppCompatActivity() {
 //				)
 //			)
 //		}
+	}
+	private fun setupTabLayout() {
+		TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+			tab.text = "Tab" + (position + 1)
+		}.attach()
+	}
+
+	private fun setupViewPager() {
+		val adapter = ViewPagerAdapter(this, 2)
+		binding.viewPager.adapter = adapter
 	}
 }
 
